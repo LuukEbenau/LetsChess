@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    letschess.service: letschessbackend
+  name: letschessbackend
+  namespace: letschess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      letschess.service: letschessbackend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        letschess.service: letschessbackend
+    spec:
+      containers:
+      - image: sacation/letschess-backend:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+        name: letschess-backend
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1500m"
+      hostname: letschessbackend
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}

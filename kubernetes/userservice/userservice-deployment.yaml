@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    letschess.service: userservice
+  name: userservice
+  namespace: letschess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      letschess.service: userservice
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        letschess.service: userservice
+    spec:
+      containers:
+      - image: mysql:8.0.24
+        imagePullPolicy: IfNotPresent
+        args:
+        - --default-authentication-plugin=mysql_native_password
+        env:
+        - name: MYSQL_PASS
+          value: pass
+        - name: MYSQL_ROOT_PASSWORD
+          value: letschess123
+        - name: MYSQL_USER
+          value: test
+        name: userservice-db
+        ports:
+        - containerPort: 3306
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "1500m"
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: userservice-db-data
+      
+      - image: sacation/letschess-userservice:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+        
+        name: letschess-userservice
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1500m"
+      hostname: userservice
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: userservice-db-data
+        persistentVolumeClaim:
+          claimName: userservice-db-data
+status: {}

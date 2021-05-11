@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "LetsChess-UserService"
+		},
+		{
+			"path": "LetsChess-Front"
+		},
+		{
+			"path": "kubernetes"
+		}
+	],
+	"settings": {}
+}

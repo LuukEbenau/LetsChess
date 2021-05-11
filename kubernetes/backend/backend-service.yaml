@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    letschess.service: letschessbackend
+  name: letschessbackend
+  namespace: letschess
+spec:
+  type: LoadBalancer
+  ports:
+  - name: "letschessbackend-api-http-port"
+    port: 6011
+    targetPort: 80
+  - name: "letschessbackend-api-https-port"
+    port: 6012
+    targetPort: 443
+  selector:
+    letschess.service: letschessbackend
+status:
+  loadBalancer: {}

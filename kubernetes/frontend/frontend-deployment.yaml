@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    letschess.service: letschessfrontend
+  name: letschessfrontend
+  namespace: letschess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      letschess.service: letschessfrontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        letschess.service: letschessfrontend
+    spec:
+      containers:
+      - image: sacation/letschess-front:latest
+        imagePullPolicy: Always
+        name: letschess-userservice
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1500m"
+      hostname: letschessfrontend
+      restartPolicy: Always
+status: {}
