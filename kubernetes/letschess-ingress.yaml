@@ -7,18 +7,20 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: api.letschess.nl
+    http:
       paths:
-      - path: /
-        host: api.letschess.nl
+      - path: /      
         pathType: Prefix
         backend:
           service:
             name: letschessbackend
             port: 
               number: 6011
-      - path: /
-        host: letschess.nl
+  - host: letschess.nl
+    http:
+      paths:
+      - path: / 
         pathType: Prefix
         backend:
           service:
