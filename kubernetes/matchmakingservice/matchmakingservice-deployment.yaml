@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    letschess.service: matchmakingservice
+  name: matchmakingservice
+  namespace: letschess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      letschess.service: matchmakingservice
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        letschess.service: matchmakingservice
+    spec:
+      containers:
+      - image: sacation/letschess-matchmakingservice:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+        name: letschess-matchmakingservice
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            # cpu: "3000m"
+      hostname: matchmakingservice
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}

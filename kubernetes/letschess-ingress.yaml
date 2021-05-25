@@ -7,16 +7,6 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: api.letschess.nl
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: letschessbackend
-            port: 
-              number: 6011
   - host: letschess.nl
     http:
       paths:
@@ -27,3 +17,65 @@ spec:
             name: letschessfrontend
             port: 
               number: 3000
+  - host: api.letschess.nl
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: letschessbackend
+            port: 
+              number: 6011
+
+#temp for debug only:
+  - host: userservice.letschess.nl
+    http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: userservice
+            port: 
+              number: 6001
+  - host: matchmakingservice.letschess.nl
+    http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: matchmakingservice
+            port: 
+              number: 6021
+  - host: gameservice.letschess.nl
+    http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: gameservice
+            port: 
+              number: 6031
+  - host: aiservice.letschess.nl
+    http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: aiservice
+            port: 
+              number: 6041
+  - host: chatservice.letschess.nl
+    http:
+      paths:
+      - path: / 
+        pathType: Prefix
+        backend:
+          service:
+            name: chatservice
+            port: 
+              number: 6051

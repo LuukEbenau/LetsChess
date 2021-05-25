@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    letschess.service: gameservice
+  name: gameservice
+  namespace: letschess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      letschess.service: gameservice
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        letschess.service: gameservice
+    spec:
+      containers:
+      - image: sacation/letschess-gameservice:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+        name: letschess-gameservice
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            # cpu: "3000m"
+      hostname: gameservice
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}
