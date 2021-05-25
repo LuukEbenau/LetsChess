@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    letschess.service: matchmakingservice
+  name: matchmakingservice
+  namespace: letschess
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http"
+    port: 6021
+    targetPort: 80
+  - name: "https"
+    port: 6022
+    targetPort: 443
+  selector:
+    letschess.service: matchmakingservice
+status:
+  loadBalancer: {}

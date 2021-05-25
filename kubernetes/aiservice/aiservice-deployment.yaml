@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    letschess.service: aiservice
+  name: aiservice
+  namespace: letschess
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      letschess.service: aiservice
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        letschess.service: aiservice
+    spec:
+      containers:
+      - image: sacation/letschess-aiservice:latest
+        imagePullPolicy: Always
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: ASPNETCORE_URLS
+          value: http://+:80
+        name: letschess-aiservice
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        resources:
+          limits:
+            memory: "1024Mi"
+            # cpu: "3000m"
+      hostname: aiservice
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}
