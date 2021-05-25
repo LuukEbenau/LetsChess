@@ -32,7 +32,7 @@ spec:
         resources:
           limits:
             memory: "1024Mi"
-            cpu: "1500m"
+            cpu: "3000m"
       hostname: letschessbackend
       restartPolicy: Always
       serviceAccountName: ""
