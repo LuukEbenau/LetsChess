@@ -12,41 +12,91 @@ services:
       MYSQL_USER: 'test'
       MYSQL_PASS: 'pass'
     ports:
-      - 3306:3306
+      - 6003:3306
     volumes:
       - userservice-db-data:/var/lib/mysql
     networks:
       - userservice_network
-  userservice:
-    container_name: userservice
-    image: letschess-userservice
-    build: ./LetsChess-UserService/.
-    restart: always 
-    hostname: userservice
+  # userservice:
+  #   container_name: userservice
+  #   image: letschess-userservice
+  #   build: ./LetsChess-UserService/.
+  #   restart: always 
+  #   hostname: userservice
+  #   ports:
+  #     - "6001:80"
+  #     - "6002:443"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Production
+  #     - ASPNETCORE_URLS=http://+:80
+  #   networks:
+  #     - userservice_network
+  # letschess_backend:
+  #   container_name: letschess_backend
+  #   image: letschess-backend
+  #   build: ./LetsChess-Backend/.
+  #   restart: always 
+  #   hostname: letschess-backend
+  #   ports:
+  #     - "6011:80"
+  #     - "6012:443"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Production
+  #     - ASPNETCORE_URLS=http://+:80
+  #   networks:
+  #     - userservice_network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
     ports:
-      - "6001:80"
-      - "6002:443"
+        - 5672:5672
+        - 15672:15672
     environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://+:80
-      # - LETSCHESS_Environment=Production
-    networks:
-      - userservice_network
-  letschess_backend:
-    container_name: letschess_backend
-    image: letschess-backend
-    build: ./LetsChess-Backend/.
-    restart: always 
-    hostname: letschess-backend
+      - RABBITMQ_DEFAULT_USER=letschess
+      - RABBITMQ_DEFAULT_PASS=ht4boiuehgjofmcjhyudi
+    volumes:
+        - rabbitmq:/var/lib/rabbitmq/
+        - rabbitmq:/var/log/rabbitmq/
+    
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-docker-cluster
+      - cluster.initial_master_nodes=elasticsearch
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - elastic:/usr/share/elasticsearch/data
     ports:
-      - "6011:80"
-      - "6012:443"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://+:80
+      - 9200:9200
     networks:
-      - userservice_network
+      - elastic
+  kib01:
+    image: docker.elastic.co/kibana/kibana:7.12.1
+    container_name: kib01
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
+    networks:
+      - elastic
+
+
+
 volumes:
   userservice-db-data:
+  elastic:
+    driver: local
+  rabbitmq:
 networks:
   userservice_network:
+  elastic:
+    driver: bridge
