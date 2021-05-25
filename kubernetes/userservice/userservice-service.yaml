@@ -3,17 +3,20 @@ kind: Service
 metadata:
   labels:
     letschess.service: userservice
+
   name: userservice
   namespace: letschess
 spec:
   type: LoadBalancer
   ports:
-  - name: "userservice-api-http-port"
+  - name: "http"
     port: 6001
     targetPort: 80
-  - name: "userservice-api-https-port"
+    protocol: TCP
+  - name: "https"
     port: 6002
     targetPort: 443
+    protocol: TCP
   selector:
     letschess.service: userservice
 status:

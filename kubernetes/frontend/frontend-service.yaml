@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - name: "userservice-api-http-port"
+  - name: "http"
     port: 3000
     targetPort: 3000
   selector:
