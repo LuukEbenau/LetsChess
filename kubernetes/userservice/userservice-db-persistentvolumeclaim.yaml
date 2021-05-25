@@ -4,6 +4,7 @@ metadata:
   name: userservice-db-data
   namespace: letschess
 spec:
+  storageClassName: manual
   accessModes:
   - ReadWriteOnce
   resources:
