@@ -1,3 +1,5 @@
 [submodule "LetsChess-GameService"]
 	path = LetsChess-GameService
 	url = https://github.com/LuukEbenau/LetsChess-GameService
+[submodule "LetsChess-AIService"]
+	url = https://github.com/LuukEbenau/LetsChess-AIService
