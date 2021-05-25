@@ -9,24 +9,31 @@ spec:
   rules:
   - http:
       paths:
-      - path: /api/user(/|$)(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: userservice
-            port: 
-              number: 6001
-      - path: /api/gateway(/|$)(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: letschessbackend
-            port: 
-              number: 6011
-      - path: /fe(/|$)(.*)
+      - path: /(/|$)(.*)
         pathType: Prefix
         backend:
           service:
             name: letschessfrontend
             port: 
               number: 3000
+      # - path: /api/user(/|$)(.*)
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: userservice
+      #       port: 
+      #         number: 6001
+      # - path: /api/gateway(/|$)(.*)
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: letschessbackend
+      #       port: 
+      #         number: 6011
+      # - path: /fe(/|$)(.*)
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: letschessfrontend
+      #       port: 
+      #         number: 3000
