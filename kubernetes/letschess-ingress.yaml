@@ -10,7 +10,7 @@ spec:
   - host: api.letschess.nl
     http:
       paths:
-      - path: /      
+      - path: /
         pathType: Prefix
         backend:
           service:
