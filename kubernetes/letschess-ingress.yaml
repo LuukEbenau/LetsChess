@@ -86,7 +86,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: elasticsearch
+            name: kibana
             port: 
               number: 5601
           
