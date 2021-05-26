@@ -79,3 +79,14 @@ spec:
             name: chatservice
             port: 
               number: 6051
+  - host: log.letschess.nl
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: elasticsearch
+            port: 
+              number: 5601
+          
