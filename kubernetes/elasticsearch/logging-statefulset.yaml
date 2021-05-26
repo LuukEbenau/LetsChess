@@ -45,6 +45,7 @@ spec:
             value: "es-cluster-0"
           - name: ES_JAVA_OPTS
             value: "-Xms512m -Xmx512m"
+      hostname: elasticsearch
       initContainers:
       - name: fix-permissions
         image: busybox
