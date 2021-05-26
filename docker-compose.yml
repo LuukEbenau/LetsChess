@@ -1,5 +1,4 @@
 version: "3.7"
-
 services:
   userservice-db:
     image: mysql:8.0.24
@@ -17,34 +16,6 @@ services:
       - userservice-db-data:/var/lib/mysql
     networks:
       - userservice_network
-  # userservice:
-  #   container_name: userservice
-  #   image: letschess-userservice
-  #   build: ./LetsChess-UserService/.
-  #   restart: always 
-  #   hostname: userservice
-  #   ports:
-  #     - "6001:80"
-  #     - "6002:443"
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Production
-  #     - ASPNETCORE_URLS=http://+:80
-  #   networks:
-  #     - userservice_network
-  # letschess_backend:
-  #   container_name: letschess_backend
-  #   image: letschess-backend
-  #   build: ./LetsChess-Backend/.
-  #   restart: always 
-  #   hostname: letschess-backend
-  #   ports:
-  #     - "6011:80"
-  #     - "6012:443"
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Production
-  #     - ASPNETCORE_URLS=http://+:80
-  #   networks:
-  #     - userservice_network
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
@@ -88,9 +59,6 @@ services:
       ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
     networks:
       - elastic
-
-
-
 volumes:
   userservice-db-data:
   elastic:

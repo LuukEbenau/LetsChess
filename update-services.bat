@@ -1,9 +1,20 @@
 echo lets update all services!
+
 color 01
-./LetsChess-Backend/update-service.bat
+cd LetsChess-Backend
+CALL ./update-service.bat
+cd ../
+
 color 02
-./LetsChess-MatchmakingService/update-service.bat
+cd LetsChess-MatchmakingService
+CALL ./update-service.bat
+cd ../
+
 color 03
-./LetsChess-UserService/update-service.bat
+cd LetsChess-UserService
+CALL ./update-service.bat
+cd ../
+
 color 04
-./LetsChess-Front/update-service.bat
+cd LetsChess-Front
+CALL ./update-service.bat
