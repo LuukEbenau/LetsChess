@@ -22,7 +22,7 @@ and then
 - ```sudo microk8s kubectl apply -f ./frontend```
 - etc. repeat for each folder
 
-and thats it! your application should be up and running
+and thats it! your application should be up and running.
 
 since the ingress makes use of host mapping, you should configure your OS's hostsfile to redirect the right (sub)domains to your application. 
 in my case i've added:
@@ -53,3 +53,6 @@ when that's complete you only have to open the .sln file using visual studio and
 # The application architecture
 the (kubernetes) application architecture is as following:
 ![Kubernetes Architecture](./docs/k8s-diagram.png)
+
+and to go into some more detail of the inner workings of the components of the application, i've designed a C3 diagram of the application:
+![C3 Diagram](docs/c3-diagram.png)
