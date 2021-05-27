@@ -26,7 +26,7 @@ and thats it! your application should be up and running.
 
 since the ingress makes use of host mapping, you should configure your OS's hostsfile to redirect the right (sub)domains to your application. 
 in my case i've added:
-```
+```cs
 # Letschess host mapping
 192.168.220.37 letschess.nl
 192.168.220.37 api.letschess.nl
@@ -37,7 +37,7 @@ you probably need to restart your device for these changes to take into effect.
 ## local running
 for local running you have to have visual studio installed and have a running docker environment.
 Then, run the following commands:
-```
+```powershell
 wsl -d docker-desktop
 sysctl -w vm.max_map_count=262144
 exit
