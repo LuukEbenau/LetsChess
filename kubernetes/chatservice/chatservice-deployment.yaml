@@ -33,6 +33,9 @@ spec:
           limits:
             memory: "1024Mi"
             cpu: "500m"
+          requests:
+            memory: "512Mi"
+            cpu: "100m"
       hostname: chatservice
       restartPolicy: Always
       serviceAccountName: ""

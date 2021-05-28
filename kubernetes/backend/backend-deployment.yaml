@@ -32,6 +32,9 @@ spec:
         resources:
           limits:
             memory: "1024Mi"
+            cpu: "200m"
+          requests:
+            memory: "512Mi"
             cpu: "100m"
       hostname: letschessbackend
       restartPolicy: Always
