@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   namespace: letschess
-  name: rabbitmq-client
+  name: rabbitmq
   labels:
     app: rabbitmq
     type: ClusterIP
