@@ -8,10 +8,10 @@ spec:
   resources:
     requests:
       cpu: 4
-      memory: 10Gi
+      memory: 100m
     limits:
       cpu: 4
-      memory: 10Gi
+      memory: 100m
   rabbitmq:
     additionalConfig: |
       cluster_partition_handling = pause_minority
@@ -20,7 +20,7 @@ spec:
       collect_statistics_interval = 10000
   persistence:
     storageClassName: ssd
-    storage: "500Gi"
+    storage: "100m"
   override:
     statefulSet:
       spec:
