@@ -4,7 +4,7 @@ metadata:
   name: production-ready
   namespace: letschess
 spec:
-  replicas: 1
+  replicas: 3
   resources:
     requests:
       cpu: 1
