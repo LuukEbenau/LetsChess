@@ -18,11 +18,11 @@ For starting the project you have 2 options:
 - ```echo -n "some secret key" > cookie```
 - ```kubectl create secret generic erlang-cookie --from-file=./cookie```
 ### for admin user
-- echo -n "letschess" > user
-- echo -n "ht4boiuehgjofmcjhyudi" > pass
-- sudo microk8s kubectl create secret generic rabbitmq-admin --from-file=./user --from-file=./pass
+- ```echo -n "letschess" > user```
+- ```echo -n "ht4boiuehgjofmcjhyudi" > pass```
+- ```sudo microk8s kubectl create secret generic rabbitmq-admin --from-file=./user --from-file=./pass```
 
-
+### and now pull the repo
 - ```git pull <this repository url"```
 - ```cd LetsChess/kubernetes```
 - optionally edit the hostnames of the ingress to something appropiate 
