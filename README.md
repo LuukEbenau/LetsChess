@@ -12,10 +12,20 @@ For starting the project you have 2 options:
 
 ## kubernetes
 - find a place with kubernetes installed to host the application
-- ```sudo microk8s enable ingress dns```
+- ```sudo microk8s enable ingress dns metrics-server```
+
+### cookie for rabbitmq services communication
+- ```echo -n "some secret key" > cookie```
+- ```kubectl create secret generic erlang-cookie --from-file=./cookie```
+### for admin user
+- echo -n "letschess" > user
+- echo -n "ht4boiuehgjofmcjhyudi" > pass
+- sudo microk8s kubectl create secret generic rabbitmq-admin --from-file=./user --from-file=./pass
+
+
 - ```git pull <this repository url"```
 - ```cd LetsChess/kubernetes```
-- edit the hostnames of the ingress to something appropiate 
+- optionally edit the hostnames of the ingress to something appropiate 
 
 and then
 - ```sudo microk8s kubectl apply -f .```
@@ -37,7 +47,6 @@ in my case i've added:
 192.168.220.29 chatservice.letschess.nl
 192.168.220.29 log.letschess.nl
 192.168.220.29 dashboard.letschess.nl
-
 ```
 you probably need to restart your device for these changes to take into effect.
 
