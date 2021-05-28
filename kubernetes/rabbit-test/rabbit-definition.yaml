@@ -1,7 +1,7 @@
 apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
-  name: production-ready
+  name: letschess-mq
   namespace: letschess
 spec:
   replicas: 3
@@ -20,7 +20,7 @@ spec:
       collect_statistics_interval = 10000
   persistence:
  #   storageClassName: ssd
-    storage: "100m"
+    storage: "300m"
   override:
     statefulSet:
       spec:

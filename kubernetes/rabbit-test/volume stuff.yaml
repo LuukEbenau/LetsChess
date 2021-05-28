@@ -1,11 +1,11 @@
 apiVersion: policy/v1beta1
 kind: PodDisruptionBudget
 metadata:
-  name: production-ready-rabbitmq
+  name: letschess-mq
   namespace: letschess
 spec:
   maxUnavailable: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: production-ready
+      app.kubernetes.io/name: letschess-mq
 ---
