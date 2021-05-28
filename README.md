@@ -12,7 +12,7 @@ For starting the project you have 2 options:
 
 ## kubernetes
 - find a place with kubernetes installed to host the application
-- ```sudo microk8s enable ingress dns metrics-server```
+- ```sudo microk8s enable ingress dns metrics-server storage```
 
 ### cookie for rabbitmq services communication
 - ```echo -n "some secret key" > cookie```
