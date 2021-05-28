@@ -37,7 +37,7 @@ you probably need to restart your device for these changes to take into effect.
 ## local running
 for local running you have to have visual studio installed and have a running docker environment.
 Then, run the following commands:
-```powershell
+```cmd
 wsl -d docker-desktop
 sysctl -w vm.max_map_count=262144
 exit
