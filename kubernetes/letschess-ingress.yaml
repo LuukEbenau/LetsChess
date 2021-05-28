@@ -96,7 +96,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: production-ready
+            name: letschess-mq
             port: 
               number: 15672
           
