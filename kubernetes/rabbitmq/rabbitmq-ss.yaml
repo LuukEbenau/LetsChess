@@ -91,12 +91,12 @@ spec:
           valueFrom:
             secretKeyRef:
               name: rabbitmq-admin
-              key: ht4boiuehgjofmcjhyudi
+              key: pass
         - name: RABBITMQ_DEFAULT_USER
           valueFrom:
             secretKeyRef:
               name: rabbitmq-admin
-              key: letschess
+              key: user
         - name: RABBITMQ_ERLANG_COOKIE
           valueFrom:
             secretKeyRef:
