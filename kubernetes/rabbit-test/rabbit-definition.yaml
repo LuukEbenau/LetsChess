@@ -21,6 +21,7 @@ spec:
   persistence:
     storageClassName: ssd
     storage: "100m"
+    volumeName: production-ready
   override:
     statefulSet:
       spec:
