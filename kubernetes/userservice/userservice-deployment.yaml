@@ -32,6 +32,6 @@ spec:
         resources:
           limits:
             memory: "1024Mi"
-            # cpu: "1500m"
+            cpu: "500m"
       hostname: userservice
       restartPolicy: Always
