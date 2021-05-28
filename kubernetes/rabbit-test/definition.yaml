@@ -3,3 +3,14 @@ kind: RabbitmqCluster
 metadata:
   name: rabbitmq
   namespace: letschess
+spec:
+  persistence:
+    storageClassName: fast
+    storage: 20Gi
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+    limits:
+      cpu: 1000m
+      memory: 2Gi
