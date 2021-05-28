@@ -11,7 +11,7 @@ spec:
       memory: 100m
     limits:
       cpu: 2
-      memory: 100m
+      memory: 2Gi
   rabbitmq:
     additionalConfig: |
       cluster_partition_handling = pause_minority
