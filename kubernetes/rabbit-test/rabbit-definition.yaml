@@ -19,7 +19,7 @@ spec:
       disk_free_limit.relative = 1.0
       collect_statistics_interval = 10000
   persistence:
-    storageClassName: ssd
+ #   storageClassName: ssd
     storage: "100m"
     volumeName: production-ready
   override:
