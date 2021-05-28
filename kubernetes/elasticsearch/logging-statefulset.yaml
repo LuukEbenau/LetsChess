@@ -71,8 +71,8 @@ spec:
       labels:
         app: elasticsearch
     spec:
-      volumeName: letschess-logging-volume
-      storageClassName: standard
+      #volumeName: letschess-logging-volume
+      storageClassName: microk8s-hostpath
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
