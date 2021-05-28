@@ -28,9 +28,16 @@ since the ingress makes use of host mapping, you should configure your OS's host
 in my case i've added:
 ```cs
 # Letschess host mapping
-192.168.220.37 letschess.nl
-192.168.220.37 api.letschess.nl
-192.168.220.37 log.letschess.nl
+192.168.220.29 letschess.nl
+192.168.220.29 api.letschess.nl
+192.168.220.29 matchmakingservice.letschess.nl
+192.168.220.29 userservice.letschess.nl
+192.168.220.29 gameservice.letschess.nl
+192.168.220.29 aiservice.letschess.nl
+192.168.220.29 chatservice.letschess.nl
+192.168.220.29 log.letschess.nl
+192.168.220.29 dashboard.letschess.nl
+
 ```
 you probably need to restart your device for these changes to take into effect.
 
