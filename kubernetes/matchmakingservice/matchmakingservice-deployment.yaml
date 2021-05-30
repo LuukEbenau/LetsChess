@@ -25,6 +25,16 @@ spec:
           value: Production
         - name: ASPNETCORE_URLS
           value: http://+:80
+        - name: LETSCHESS_MQCredentials:USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: letschess-mq-default-user
+              key: 
+        - name: LETSCHESS_MQCredentials:PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: letschess-mq-default-user
+              key: password
         name: letschess-matchmakingservice
         ports:
         - containerPort: 80
