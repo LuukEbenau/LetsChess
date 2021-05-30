@@ -25,6 +25,16 @@ spec:
           value: Production
         - name: ASPNETCORE_URLS
           value: http://+:80
+        - name: LETSCHESS_MQCredentials__Username
+          valueFrom:
+            secretKeyRef:
+              name: letschess-mq-default-user
+              key: username
+        - name: LETSCHESS_MQCredentials__Password
+          valueFrom:
+            secretKeyRef:
+              name: letschess-mq-default-user
+              key: password
         name: letschess-gameservice
         ports:
         - containerPort: 80
