@@ -29,12 +29,12 @@ spec:
           valueFrom:
             secretKeyRef:
               name: letschess-mq-default-user
-              key: .data.username
+              key: username
         - name: LETSCHESS_MQCredentials:Password
           valueFrom:
             secretKeyRef:
               name: letschess-mq-default-user
-              key: .data.password
+              key: password
         name: letschess-matchmakingservice
         ports:
         - containerPort: 80
