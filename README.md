@@ -72,3 +72,14 @@ the (kubernetes) application architecture is as following:
 
 and to go into some more detail of the inner workings of the components of the application, i've designed a C3 diagram of the application:
 ![C3 Diagram](docs/c3-diagram.png)
+
+# accessing Message queue
+to access the message queue, you first need to know the username and password.
+you can get these by:
+```cmd
+username="$(sudo microk8s kubectl get secret letschess-mq-default-user -o jsonpath='{.data.username}' | base64 --decode)"
+password="$(sudo microk8s kubectl get secret letschess-mq-default-user -o jsonpath='{.data.password}' | base64 --decode)"
+echo $username
+echo $password
+```
+you can then access the mq admin panel at [http://mq.letschess.nl](http://mq.letschess.nl).
