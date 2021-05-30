@@ -1,5 +1,0 @@
-D:\Projects\LetsChess\LetsChess-Helpers\obj\Debug\net5.0\LetsChess-Helpers.csprojAssemblyReference.cache
-D:\Projects\LetsChess\LetsChess-Helpers\obj\Debug\net5.0\LetsChess-Helpers.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects\LetsChess\LetsChess-Helpers\obj\Debug\net5.0\LetsChess-Helpers.AssemblyInfoInputs.cache
-D:\Projects\LetsChess\LetsChess-Helpers\obj\Debug\net5.0\LetsChess-Helpers.AssemblyInfo.cs
-D:\Projects\LetsChess\LetsChess-Helpers\obj\Debug\net5.0\LetsChess-Helpers.csproj.CoreCompileInputs.cache
