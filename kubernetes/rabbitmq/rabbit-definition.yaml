@@ -11,9 +11,9 @@ spec:
       memory: 100m
     limits:
       cpu: 2
-      memory: 2Gi
+      memory: 4Gi
   persistence:
-    storage: "2Gi"
+    storage: "10Gi"
   override:
     statefulSet:
       spec:
