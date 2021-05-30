@@ -12,12 +12,6 @@ spec:
     limits:
       cpu: 2
       memory: 2Gi
-  rabbitmq:
-    additionalConfig: |
-      cluster_partition_handling = pause_minority
-      vm_memory_high_watermark_paging_ratio = 0.99
-      disk_free_limit.relative = 1.0
-      collect_statistics_interval = 10000
   persistence:
     storage: "2Gi"
   override:
