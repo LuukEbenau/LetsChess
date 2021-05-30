@@ -45,7 +45,6 @@ spec:
             cpu: "200m"
           requests:
             memory: "512Mi"
-            cpu: "100m"
       hostname: letschessbackend
       restartPolicy: Always
       serviceAccountName: ""

@@ -30,7 +30,6 @@ spec:
             cpu: "500m"
           requests:
             memory: "256Mi"
-            cpu: "100m"
       hostname: letschessfrontend
       restartPolicy: Always
 status: {}
