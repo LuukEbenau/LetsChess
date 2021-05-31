@@ -31,7 +31,7 @@ spec:
         - containerPort: 443
         resources:
           limits:
-            memory: "1024Mi"
+            memory: "2048Mi"
             cpu: "500m"
       hostname: userservice
       restartPolicy: Always

@@ -38,7 +38,7 @@ spec:
         - containerPort: 3306
         resources:
           limits:
-            memory: "512Mi"
+            memory: "2048Mi"
             cpu: "500m"
         volumeMounts:
         - mountPath: /var/lib/mysql
@@ -50,3 +50,5 @@ spec:
 
         persistentVolumeClaim:
           claimName: userservice-db-data
+      
+  
