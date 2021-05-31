@@ -21,6 +21,9 @@ For starting the project you have 2 options:
 - ```echo -n "letschess" > user```
 - ```echo -n "ht4boiuehgjofmcjhyudi" > pass```
 - ```sudo microk8s kubectl create secret generic rabbitmq-admin --from-file=./user --from-file=./pass```
+- ```rm pass```
+- ```rm user```
+
 
 ### and now pull the repo
 - ```git pull <this repository url"```

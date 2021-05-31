@@ -7,16 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-UserService", "Le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-Backend", "LetsChess-Backend\LetsChess-Backend.csproj", "{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9EC88244-C915-4E71-98B1-649C7183ABF2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Solution Items", "4-Solution Items", "{9EC88244-C915-4E71-98B1-649C7183ABF2}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-GameService", "LetsChess-GameService\LetsChess-GameService.csproj", "{9BF7A59E-13B9-4933-AF79-F565AA71F7BE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D9D467FA-B0BF-4FAB-A051-D606E2340F3E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Services", "3-Services", "{D9D467FA-B0BF-4FAB-A051-D606E2340F3E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{83620C7E-A3C2-4706-BF73-7711424CC034}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Gateway", "1-Gateway", "{83620C7E-A3C2-4706-BF73-7711424CC034}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Letschess-ChatService", "Letschess-ChatService\Letschess-ChatService.csproj", "{25B2638A-9CC8-4CD0-BE0F-168F17C82ABD}"
 EndProject
@@ -24,9 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-AIService", "Lets
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-MatchmakingService", "LetsChess-MatchmakingService\LetsChess-MatchmakingService.csproj", "{71277B56-AD8B-40E9-89BE-3205B26CBD24}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{03D6321A-8799-4AA9-ACB1-6890B2091B2A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Shared", "2-Shared", "{1CE4DEA9-4E48-4743-9024-C35BF45F155C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsChess-Helpers", "LetsChess-Helpers\LetsChess-Helpers.csproj", "{CF1A6538-BA64-46D5-8DE0-D6145A194192}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsChess.Models", "LetsChess.Models\LetsChess.Models.csproj", "{0F296946-A516-4984-B345-CFCC32074C2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,10 +58,10 @@ Global
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF1A6538-BA64-46D5-8DE0-D6145A194192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF1A6538-BA64-46D5-8DE0-D6145A194192}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF1A6538-BA64-46D5-8DE0-D6145A194192}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF1A6538-BA64-46D5-8DE0-D6145A194192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F296946-A516-4984-B345-CFCC32074C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F296946-A516-4984-B345-CFCC32074C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F296946-A516-4984-B345-CFCC32074C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F296946-A516-4984-B345-CFCC32074C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,7 +73,7 @@ Global
 		{25B2638A-9CC8-4CD0-BE0F-168F17C82ABD} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{DE4A422E-46F1-4D45-BD71-D4DEEDDD30EB} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
-		{CF1A6538-BA64-46D5-8DE0-D6145A194192} = {03D6321A-8799-4AA9-ACB1-6890B2091B2A}
+		{0F296946-A516-4984-B345-CFCC32074C2D} = {1CE4DEA9-4E48-4743-9024-C35BF45F155C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B754BC1C-6870-48D6-A872-AB07A99AF9EE}
