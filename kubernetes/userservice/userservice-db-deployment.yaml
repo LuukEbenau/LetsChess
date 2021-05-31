@@ -47,5 +47,6 @@ spec:
       restartPolicy: Always
       volumes:
       - name: userservice-db-data
+
         persistentVolumeClaim:
           claimName: userservice-db-data
