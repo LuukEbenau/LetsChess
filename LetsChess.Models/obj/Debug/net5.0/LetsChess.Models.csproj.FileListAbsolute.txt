@@ -1,0 +1,12 @@
+D:\Projects\LetsChess\LetsChess.Models\bin\Debug\net5.0\LetsChess.Models.deps.json
+D:\Projects\LetsChess\LetsChess.Models\bin\Debug\net5.0\LetsChess.Models.dll
+D:\Projects\LetsChess\LetsChess.Models\bin\Debug\net5.0\ref\LetsChess.Models.dll
+D:\Projects\LetsChess\LetsChess.Models\bin\Debug\net5.0\LetsChess.Models.pdb
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.AssemblyInfoInputs.cache
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.AssemblyInfo.cs
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.csproj.CoreCompileInputs.cache
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.dll
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\ref\LetsChess.Models.dll
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.pdb
+D:\Projects\LetsChess\LetsChess.Models\obj\Debug\net5.0\LetsChess.Models.csprojAssemblyReference.cache
