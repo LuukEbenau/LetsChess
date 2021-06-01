@@ -17,14 +17,16 @@ For starting the project you have 2 options:
 ### cookie for rabbitmq services communication
 - ```echo -n "some secret key" > cookie```
 - ```sudo microk8s kubectl create secret generic erlang-cookie --from-file=./cookie```
-- rm cookie
+- ```rm cookie```
 ### for admin user
 - ```echo -n "letschess" > user```
 - ```echo -n "ht4boiuehgjofmcjhyudi" > pass```
 - ```sudo microk8s kubectl create secret generic rabbitmq-admin --from-file=./user --from-file=./pass```
 - ```rm pass```
 - ```rm user```
-
+## install operator
+- ```sudo microk8s kubectl apply -f "https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml"```
+- ```sudo microk8s kubectl config set-context --current --namespace=letschess```
 
 ### and now pull the repo
 - ```git pull <this repository url"```
