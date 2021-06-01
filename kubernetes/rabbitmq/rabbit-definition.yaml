@@ -7,7 +7,7 @@ spec:
   replicas: 1
   resources:
     limits:
-      cpu: 2
+      # cpu: 2
       memory: "256Mi"
   rabbitmq:
     additionalConfig: |

@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "LetsChess-Front\\app"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {}
