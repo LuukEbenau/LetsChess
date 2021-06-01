@@ -26,8 +26,8 @@ spec:
         - containerPort: 443
         resources:
           limits:
-            memory: "256Mi"
-            cpu: "500m"
+            memory: "512Mi"
+            # cpu: "500m"
       hostname: letschessfrontend
       restartPolicy: Always
 status: {}
