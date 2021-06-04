@@ -26,8 +26,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-MatchmakingServic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Shared", "2-Shared", "{1CE4DEA9-4E48-4743-9024-C35BF45F155C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsChess.Models", "LetsChess.Models\LetsChess.Models.csproj", "{0F296946-A516-4984-B345-CFCC32074C2D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,10 +56,6 @@ Global
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F296946-A516-4984-B345-CFCC32074C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F296946-A516-4984-B345-CFCC32074C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F296946-A516-4984-B345-CFCC32074C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F296946-A516-4984-B345-CFCC32074C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,7 +67,6 @@ Global
 		{25B2638A-9CC8-4CD0-BE0F-168F17C82ABD} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{DE4A422E-46F1-4D45-BD71-D4DEEDDD30EB} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
-		{0F296946-A516-4984-B345-CFCC32074C2D} = {1CE4DEA9-4E48-4743-9024-C35BF45F155C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B754BC1C-6870-48D6-A872-AB07A99AF9EE}
