@@ -6,12 +6,15 @@ Welcome to The letschess repository!
 Letschess is a platform to play chess online vs other players or vs AI players.
 
 # Build status:
-|**Frontend:**|status unknown|
+|**Frontend:**|[![Build Test](https://github.com/LuukEbenau/LetsChess-Front/actions/workflows/build-test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-Front/actions/workflows/build-test.yml)|
 |--:|---|
 |**Backend:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-Backend/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-Backend/actions/workflows/build%20and%20test.yml)|
 |**UserService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-UserService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-UserService/actions/workflows/build%20and%20test.yml)|
 |**GameService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml)|
 |**MatchmakingService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml)|
+
+# Game in action
+![Kubernetes Architecture](./docs/game.png)
 
 # Getting started
 For starting the project you have 2 options:
