@@ -24,8 +24,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-AIService", "Lets
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-MatchmakingService", "LetsChess-MatchmakingService\LetsChess-MatchmakingService.csproj", "{71277B56-AD8B-40E9-89BE-3205B26CBD24}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Shared", "2-Shared", "{1CE4DEA9-4E48-4743-9024-C35BF45F155C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
