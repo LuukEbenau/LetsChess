@@ -13,6 +13,8 @@ Letschess is a platform to play chess online vs other players or vs AI players.
 |**GameService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml)|
 |**MatchmakingService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml)|
 
+For more information about Contineous Integration, Delivery and deployments see: [CI&CD.md](./docs/CI&CD.md)
+
 # Game in action
 ![Kubernetes Architecture](./docs/game.png)
 
