@@ -1,12 +1,12 @@
 # Continious Integration & Delivery, and deployments
 Letschess makes use of CI to validate the quality of the software and CD for building stable versions of the application.
 ## Continious Integration
-|**Frontend:**|[![Build Test](https://github.com/LuukEbenau/LetsChess-Front/actions/workflows/build-test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-Front/actions/workflows/build-test.yml)|
-|--:|---|
-|**Backend:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-Backend/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-Backend/actions/workflows/build%20and%20test.yml)|
-|**UserService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-UserService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-UserService/actions/workflows/build%20and%20test.yml)|
-|**GameService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml)|
-|**MatchmakingService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml)|
+|**Frontend:**|[![Build Test](https://github.com/LuukEbenau/LetsChess-Front/actions/workflows/build-test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-Front/actions/workflows/build-test.yml)|[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=LuukEbenau_LetsChess-Front)](https://sonarcloud.io/dashboard?id=LuukEbenau_LetsChess-Front)|
+|--:|---|---|
+|**Backend:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-Backend/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-Backend/actions/workflows/build%20and%20test.yml)|[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=LuukEbenau_LetsChess-Backend&metric=alert_status)](https://sonarcloud.io/dashboard?id=LuukEbenau_LetsChess-Backend)|
+|**UserService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-UserService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-UserService/actions/workflows/build%20and%20test.yml)|[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=LuukEbenau_LetsChess-UserService&metric=alert_status)](https://sonarcloud.io/dashboard?id=LuukEbenau_LetsChess-UserService)|
+|**GameService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-GameService/actions/workflows/build%20and%20test.yml)|[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=LuukEbenau_LetsChess-GameService&metric=alert_status)](https://sonarcloud.io/dashboard?id=LuukEbenau_LetsChess-GameService)|
+|**MatchmakingService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/build%20and%20test.yml)|[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=LuukEbenau_LetsChess-MatchmakingService&metric=alert_status)](https://sonarcloud.io/dashboard?id=LuukEbenau_LetsChess-MatchmakingService)|
 
 All services make use of an CI pipeline which builds the application, validates that tests are not failing and searches for code smells of the application using SonarQube.
 
@@ -19,6 +19,9 @@ All services make use of an CI pipeline which builds the application, validates 
 |**MatchmakingService:**|[![Build_and_test_app](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/delivery_to_dockerhub.yml/badge.svg)](https://github.com/LuukEbenau/LetsChess-MatchmakingService/actions/workflows/delivery_to_dockerhub.yml)|[https://hub.docker.com/repository/docker/sacation/letschess-matchmakingservice](https://hub.docker.com/repository/docker/sacation/letschess-matchmakingservice)|
 
 
-
-The application gets delivered to the docker hub 
+The application gets delivered to the docker hub so that the application can be deployed with the most up to date version of the app which is throughly tested for stability.
 ## Deployment
+The current version of the application is deployed on the FHICT NetLab server, which is behind a VPN.
+If you're part of FHICT: connect to the vpn of seclab, and connect to the server environment using 
+ssh: ubuntu@letschess.nl
+
