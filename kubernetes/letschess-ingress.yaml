@@ -11,6 +11,11 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  defaultBackend:
+    service:
+      name: letschessfrontend
+      port:
+        number: 3000
   rules:
   - host: letschess.nl
     http:

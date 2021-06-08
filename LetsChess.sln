@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-UserService", "LetsChess-UserService\LetsChess-UserService.csproj", "{CBB5F21C-1F82-4AFC-925C-B16DAAEAB0FF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-Backend", "LetsChess-Backend\LetsChess-Backend.csproj", "{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Solution Items", "4-Solution Items", "{9EC88244-C915-4E71-98B1-649C7183ABF2}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
@@ -24,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-AIService", "Lets
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-MatchmakingService", "LetsChess-MatchmakingService\LetsChess-MatchmakingService.csproj", "{71277B56-AD8B-40E9-89BE-3205B26CBD24}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsChess-Backend", "LetsChess-Backend\LetsChess-Backend\LetsChess-Backend.csproj", "{72C11363-BEB9-4471-A432-61BF89EDF415}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,10 +34,6 @@ Global
 		{CBB5F21C-1F82-4AFC-925C-B16DAAEAB0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBB5F21C-1F82-4AFC-925C-B16DAAEAB0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBB5F21C-1F82-4AFC-925C-B16DAAEAB0FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9BF7A59E-13B9-4933-AF79-F565AA71F7BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9BF7A59E-13B9-4933-AF79-F565AA71F7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BF7A59E-13B9-4933-AF79-F565AA71F7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,17 +50,21 @@ Global
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C11363-BEB9-4471-A432-61BF89EDF415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C11363-BEB9-4471-A432-61BF89EDF415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C11363-BEB9-4471-A432-61BF89EDF415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C11363-BEB9-4471-A432-61BF89EDF415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CBB5F21C-1F82-4AFC-925C-B16DAAEAB0FF} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
-		{3DA539E8-6E6A-4C8F-A6A6-BEF951F199F4} = {83620C7E-A3C2-4706-BF73-7711424CC034}
 		{9BF7A59E-13B9-4933-AF79-F565AA71F7BE} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{25B2638A-9CC8-4CD0-BE0F-168F17C82ABD} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{DE4A422E-46F1-4D45-BD71-D4DEEDDD30EB} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
 		{71277B56-AD8B-40E9-89BE-3205B26CBD24} = {D9D467FA-B0BF-4FAB-A051-D606E2340F3E}
+		{72C11363-BEB9-4471-A432-61BF89EDF415} = {83620C7E-A3C2-4706-BF73-7711424CC034}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B754BC1C-6870-48D6-A872-AB07A99AF9EE}
