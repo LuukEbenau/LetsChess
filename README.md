@@ -65,6 +65,7 @@ in my case i've added:
 192.168.220.29 chatservice.letschess.nl
 192.168.220.29 log.letschess.nl
 192.168.220.29 dashboard.letschess.nl
+192.168.220.29 mq.letschess.nl
 ```
 you probably need to restart your device for these changes to take into effect.
 
