@@ -19,3 +19,6 @@
 [submodule "LetsChess-ChatService"]
 	path = LetsChess-ChatService
 	url = https://github.com/LuukEbenau/LetsChess-ChatService.git
+[submodule "LetsChess-Functions"]
+	path = LetsChess-Functions
+	url = https://github.com/LuukEbenau/LetsChess-Functions.git
