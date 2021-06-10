@@ -9,3 +9,7 @@
 	url = https://github.com/LuukEbenau/LetsChess-Backend.git
 [submodule "LetsChess-UserService"]
 	url = https://github.com/LuukEbenau/LetsChess-UserService.git
+[submodule "LetsChess-MatchmakingService"]
+	url = https://github.com/LuukEbenau/LetsChess-MatchmakingService.git
+[submodule "LetsChess-ChatService"]
+	url = https://github.com/LuukEbenau/LetsChess-ChatService.git
