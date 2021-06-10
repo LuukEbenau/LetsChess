@@ -2,14 +2,20 @@
 	path = LetsChess-GameService
 	url = https://github.com/LuukEbenau/LetsChess-GameService.git
 [submodule "LetsChess-AIService"]
+	path = LetsChess-AIService
 	url = https://github.com/LuukEbenau/LetsChess-AIService
 [submodule "LetsChess-Front"]
+	path = LetsChess-Front
 	url = https://github.com/LuukEbenau/LetsChess-Front.git
 [submodule "LetsChess-Backend"]
+	path = LetsChess-Backend
 	url = https://github.com/LuukEbenau/LetsChess-Backend.git
 [submodule "LetsChess-UserService"]
+	path = LetsChess-UserService
 	url = https://github.com/LuukEbenau/LetsChess-UserService.git
 [submodule "LetsChess-MatchmakingService"]
+	path = LetsChess-MatchmakingService
 	url = https://github.com/LuukEbenau/LetsChess-MatchmakingService.git
 [submodule "LetsChess-ChatService"]
+	path = LetsChess-ChatService
 	url = https://github.com/LuukEbenau/LetsChess-ChatService.git
