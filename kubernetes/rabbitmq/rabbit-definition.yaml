@@ -15,7 +15,7 @@ spec:
       disk_free_limit.absolute = 50MB
       collect_statistics_interval = 10000
   persistence:
-    storage: "1Gi"
+    storage: "300Mi"
   override:
     statefulSet:
       spec:
