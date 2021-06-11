@@ -69,12 +69,6 @@ in my case i've added:
 ```
 you probably need to restart your device for these changes to take into effect.
 
-## The application also makes use of KNative, which you can enable as folowwing:
-```ps
-sudo microk8s enable ambassador
-sudo microk8s kubectl apply -f ./knative
-```
-
 ## local running
 for local running you have to have visual studio installed and have a running docker environment.
 Then, run the following commands:
