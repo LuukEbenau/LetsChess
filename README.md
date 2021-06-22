@@ -27,10 +27,12 @@ For starting the project you have 2 options:
 - find a place with kubernetes installed to host the application
 - ```sudo microk8s enable ingress dns metrics-server storage```
 - ```sudo microk8s kubectl apply -f .```
+~
 ### cookie for rabbitmq services communication
 - ```echo -n "some secret key" > cookie```
 - ```sudo microk8s kubectl create secret generic erlang-cookie --from-file=./cookie```
 - ```rm cookie```
+~
 ### for admin user
 - ```echo -n "letschess" > user```
 - ```echo -n "ht4boiuehgjofmcjhyudi" > pass```
